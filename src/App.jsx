@@ -9,6 +9,8 @@ function App() {
       <Chat />
       <Detail />
     </div>
+
+    
   )
 }
 
