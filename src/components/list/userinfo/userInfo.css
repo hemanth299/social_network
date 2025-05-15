@@ -1,0 +1,38 @@
+.userInfo{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+.user{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  h2{
+    font: normal 600 20px 'Lucida Sans', sans-serif;
+  }
+
+  img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+  }
+  .icons{
+    display: flex;
+    gap: 10px;
+    color: white;
+    cursor: pointer;
+
+    &:hover{
+      color: #3b82f6;
+      transition: all 0.3s ease-in-out;
+    }
+    img{
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

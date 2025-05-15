@@ -1,0 +1,32 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+
+body { /* Adjust the percentage to control the zoom level */
+  background-image: url("/bg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: overlay;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white  ;
+}
+.container{
+  width: 90vw;
+  height: 90vh;
+  background-color: rgba(35, 52, 83, 0.75);
+  backdrop-filter: blur(19px) saturate(180%);
+  border-radius: 12px;
+  display: flex; 
+}
+
+
