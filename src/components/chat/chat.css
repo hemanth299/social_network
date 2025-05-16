@@ -60,6 +60,7 @@
     }
   }
   .center{
+    gap: 20px;
     padding: 20px;
     flex: 1;
   overflow-y: auto; /* Enable vertical scrolling */
@@ -68,7 +69,6 @@
   scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* For Firefox: Subtle color */
   display: flex;
   flex-direction: column;
-  gap: 10px;
   /* For Webkit-based browsers (Chrome, Edge, Safari) */
   &::-webkit-scrollbar {
     width: 6px; /* Makes the scrollbar thinner */

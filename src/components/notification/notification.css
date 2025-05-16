@@ -1,0 +1,15 @@
+/* Fix for ToastContainer scroll issue */
+.Toastify__toast-container {
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+  box-sizing: border-box; /* Ensure proper box-sizing */
+  overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+.Toastify__toast {
+  margin: 0 auto; /* Center the toast and prevent overflow */
+}
+
+body {
+  overflow-x: hidden; /* Disable horizontal scrolling globally */
+}
