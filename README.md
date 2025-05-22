@@ -1,12 +1,93 @@
-# React + Vite
+# Social Network React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern social network web application built with React, Zustand, and Firebase (Authentication, Firestore, and Storage).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User registration and login (with avatar upload)
+- Real-time chat between users
+- User list and chat list
+- Block/unblock users
+- Toast notifications for feedback
+- Responsive and modern UI
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/)
+- [Firebase](https://firebase.google.com/) (Auth, Firestore, Storage)
+- [Zustand](https://zustand-demo.pmnd.rs/) (state management)
+- [React Toastify](https://fkhadra.github.io/react-toastify/) (notifications)
+- [Vite](https://vitejs.dev/) (build tool)
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/social-network.git
+cd social-network
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Set up Firebase
+
+- Create a Firebase project at [Firebase Console](https://console.firebase.google.com/).
+- Enable **Authentication** (Email/Password), **Firestore Database**, and **Storage**.
+- Copy your Firebase config and update `src/lib/firebase.js`.
+- Add your API key to a `.env` file in the root:
+
+```
+VITE_API_KEY="your-firebase-api-key"
+```
+
+### 4. (Optional) Set up Firebase Storage CORS
+
+If you plan to upload avatars, configure CORS for Firebase Storage:
+
+```bash
+gsutil cors set ./src/cors.json gs://your-bucket-name.appspot.com
+```
+
+### 5. Start the development server
+
+```bash
+npm run dev
+```
+
+Visit [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Folder Structure
+
+```
+src/
+  components/
+    chat/
+    detail/
+    list/
+    login/
+    notification/
+  lib/
+    firebase.js
+    upload.js
+    userStore.js
+    chatStore.js
+  App.jsx
+  main.jsx
+  index.css
+```
+
+## License
+
+[ISC](LICENSE)
+
+---
+
+**Note:**
+
+- Make sure to secure your Firebase rules before deploying to production.
+- Replace `"your-firebase-api-key"` and `"your-bucket-name"` with your actual values.

@@ -6,6 +6,13 @@
   "license": "ISC",
   "author": "",
   "type": "module",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:5173",
+      "changeOrigin": true,
+      "secure": false
+    }
+  },
   "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
@@ -19,6 +26,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-toastify": "^11.0.5",
+    "timeago.js": "^4.0.2",
     "zustand": "^5.0.4"
   },
   "devDependencies": {

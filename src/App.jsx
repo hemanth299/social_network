@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Chat from "./components/chat/Chat";
 import Detail from "./components/detail/Detail";
-import List from "./components/list/List";
+import List from "./components/list/list";
 import Login from "./components/login/Login";
 import Notification from "./components/notification/Notification";
 import { onAuthStateChanged } from "firebase/auth";
@@ -22,6 +22,8 @@ const App = () => {
       unSub();
     };
   }, [fetchUserInfo]);
+  console.log("Current User:", currentUser);
+console.log("Chat ID:", chatId);
 
   if (isLoading) return <div className="loading">Loading...</div>;
 
